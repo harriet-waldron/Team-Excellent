@@ -25,7 +25,8 @@ const Form = () => {
         <label htmlFor='name'>Name:</label>
         <input name='name' type='text' value={formData.name} placeholder='Name' required onChange={(e) => handleChange(e)} />
         <input name='birthdate' type='date' value={formData.birthdate} placeholder='Birthdate' required onChange={(e) => handleChange(e)} />
-        <h3>This is the first question?</h3>
+        <h2>Rate these questions from 1 to 4, 4 meaning you completely agree, 1 meaning you completely disagree</h2>
+        <h3>Is noodles the staple of life?</h3>
         <label htmlFor='q1-1'>1</label>
         <input type='radio' name='question1' id='q1-1' value='1' onChange={(e) => handleChange(e)} />
         <label htmlFor='q1-2'>2</label>
@@ -34,7 +35,7 @@ const Form = () => {
         <input type='radio' name='question1' id='q1-3' value='3' onChange={(e) => handleChange(e)} />
         <label htmlFor='q1-4'>4</label>
         <input type='radio' name='question1' id='q1-4' value='4' onChange={(e) => handleChange(e)} />
-        <h3>This is the second question</h3>
+        <h3>When life throws you chillies, do you make chilli oil?</h3>
         <label htmlFor='q2-1'>1</label>
         <input type='radio' name='question2' id='q2-1' value='1' onChange={(e) => handleChange(e)} />
         <label htmlFor='q2-2'>2</label>
@@ -43,7 +44,7 @@ const Form = () => {
         <input type='radio' name='question2' id='q2-3' value='3' onChange={(e) => handleChange(e)} />
         <label htmlFor='q2-4'>4</label>
         <input type='radio' name='question2' id='q2-4' value='4' onChange={(e) => handleChange(e)} />
-        <h3>This is the third question</h3>
+        <h3>Are you about that panda life?</h3>
         <label htmlFor='q3-1'>1</label>
         <input type='radio' name='question3' id='q3-1' value='1' onChange={(e) => handleChange(e)} />
         <label htmlFor='q3-2'>2</label>
@@ -52,7 +53,7 @@ const Form = () => {
         <input type='radio' name='question3' id='q3-3' value='3' onChange={(e) => handleChange(e)} />
         <label htmlFor='q3-4'>4</label>
         <input type='radio' name='question3' id='q3-4' value='4' onChange={(e) => handleChange(e)} />
-        <h3>This is the fourth question</h3>
+        <h3>is Kung Fu fighting is the essence of life?</h3>
         <label htmlFor='q4-1'>1</label>
         <input type='radio' name='question4' id='q4-1' value='1' onChange={(e) => handleChange(e)} />
         <label htmlFor='q4-2'>2</label>
