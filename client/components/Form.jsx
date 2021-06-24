@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 
+import {} from '../api'
+
 const Form = () => {
   const [formData, setFormData] = useState({
+    responseID: 0,
     name: '',
     birthdate: '',
     question1: 0,
@@ -15,6 +18,8 @@ const Form = () => {
   }
 
   const handleSubmit = (e) => {
+    const responseID = formData.question1 + formData.question2 + formData.question3 + formData.question4
+    
     e.preventDefault()
     console.log(formData)
   }

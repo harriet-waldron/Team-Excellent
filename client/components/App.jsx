@@ -11,9 +11,9 @@ const App = () => {
 
   return (
     <div className='app'>
-     
+
       <Header />
-      {!submitted ? <Form update={setSubmitted}/>
+      {!submitted ? <Form update={setSubmitted} />
         : <>
           <ExternalResponse />
           <InternalResponse />
