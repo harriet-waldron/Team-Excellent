@@ -2,8 +2,10 @@ import React, { useState, useEffect} from 'react'
 
 const Header = () => {
   return (
-    <div className='header'>
-      <h1>Header</h1>
+    <div className='headerContainer'>
+    <div className='titleContainer'>
+      <h1 className='headerTitle'>Header</h1>
+    </div>
     </div>
   )
 }

@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <div className='app'>
-      <h1>Gonna be the app</h1>
+     
       <Header />
       {submitted ? <Form />
         : <>
