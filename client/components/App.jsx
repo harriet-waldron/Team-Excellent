@@ -13,7 +13,7 @@ const App = () => {
     <div className='app'>
       <h1>Gonna be the app</h1>
       <Header />
-      {submitted ? <Form />
+      {!submitted ? <Form update={setSubmitted}/>
         : <>
           <ExternalResponse />
           <InternalResponse />
