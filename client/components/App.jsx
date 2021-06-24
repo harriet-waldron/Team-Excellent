@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 import Header from './Header.jsx'
 import Form from './Form.jsx'
@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <div className='app'>
-      <h1>Gonna be the app</h1>
+     
       <Header />
       {!submitted ? <Form update={setSubmitted}/>
         : <>
