@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import { } from '../api'
+// import { } from '../api'
 
 const Form = (props) => {
   const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ const Form = (props) => {
   }, [helper])
 
   const handleSubmit = (e) => {
-    props.update()
+    props.update(formData)
     e.preventDefault()
     console.log(formData)
   }
@@ -36,7 +36,7 @@ const Form = (props) => {
       <form onSubmit={(e => handleSubmit(e))}>
         <label htmlFor='name'>Name:</label>
         <input name='name' type='text' value={formData.name} placeholder='Name' onChange={(e) => handleChange(e)} />
-        <input name='birthdate' type='text' value={formData.starsign} placeholder='starsign' onChange={(e) => handleChange(e)} />
+        <input name='starSign' type='text' value={formData.starsign} placeholder='starsign' onChange={(e) => handleChange(e)} />
         <h2>Rate these questions from 1 to 4, 4 meaning you completely agree, 1 meaning you completely disagree</h2>
         <h3>Is noodles the staple of life?</h3>
         <label htmlFor='q1-1'>1</label>
