@@ -101,3 +101,7 @@ html {
     height: 20%;
     width: 20%;
 }
+
+.externalResponse li {
+  line-height: 1.5em;
+}
