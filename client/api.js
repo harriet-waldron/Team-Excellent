@@ -12,8 +12,13 @@ export function externalApi (starSign) {
     })
 }
 
-export function internalApi () {
-
+export function internalApi (score) {
+  console.log(score)
+  return request.get(`${serverURL}/${score}`)
+  .then(result => result.body)
+    .catch(err => {
+      console.log(err.message)
+    })
 }
 
 // App

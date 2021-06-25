@@ -15,6 +15,18 @@ const App = () => {
 
   // this is where i do usestate
   const [horoscope, setHoroscope] = useState({})
+  const [answer, setAnswer] = useState({})
+
+useEffect(() => {
+    if (info.score) {
+      internalApi(info.score)
+        .then((result) => {
+
+          // console.log('result :' ,result[0])
+          setAnswer(result[0])
+        })
+    }
+  }, [info])
 
   useEffect(() => {
     if (info.starSign) {
@@ -47,9 +59,10 @@ const App = () => {
           {!submitted ? <Form update={(resp) => formResponse(resp)} />
             : <>
 
-              <ExternalResponse obj={horoscope} name={info.name} star={info.starSign} />
-              <InternalResponse text={'are you there'}/>
 
+          <ExternalResponse obj={horoscope}/>
+          <InternalResponse text={answer}/>
+            
             </>}
           <Footer />
         </> }

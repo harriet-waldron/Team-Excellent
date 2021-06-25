@@ -1,9 +1,9 @@
 import React from 'react'
 
-const InternalResponse = () => {
+const InternalResponse = (props) => {
   return (
     <div className='internalResponse'>
-      <h2>future prediction from our db</h2>
+      <h2>{props.text.answer}</h2>
     </div>
   )
 }
