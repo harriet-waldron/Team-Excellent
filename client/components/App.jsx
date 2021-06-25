@@ -1,14 +1,28 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Header from './Header.jsx'
 import Form from './Form.jsx'
 import ExternalResponse from './ExternalResponse.jsx'
 import InternalResponse from './InternalResponse.jsx'
 import Footer from './Footer.jsx'
+import { externalApi, internalApi } from '../api'
 
 const App = () => {
   const [submitted, setSubmitted] = useState(false)
   const [info, setInfo] = useState({})
+
+  // this is where i do usestate
+  const [horoscope, setHoroscope] = useState({})
+
+  useEffect(() => {
+    if (info.starSign) {
+      externalApi(info.starSign)
+        .then((result) => {
+          setHoroscope(result)
+        })
+    }
+  }, [info])
+
 
   const formResponse = (data) => {
     setInfo({
@@ -20,17 +34,16 @@ const App = () => {
     console.log(info)
   }
 
-  // this is where i do usestate
-  const [horoscope, setHoroscope] = useState([])
-
   return (
     <div className='app'>
 
       <Header />
       {!submitted ? <Form update={(resp) => formResponse(resp)} />
         : <>
-          <ExternalResponse data={info} />
-          <InternalResponse data={info} />
+
+          <ExternalResponse obj={horoscope}/>
+          <InternalResponse text={'are you there'}/>
+
         </>}
       <Footer />
     </div>
