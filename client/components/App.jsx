@@ -13,6 +13,18 @@ const App = () => {
 
   // this is where i do usestate
   const [horoscope, setHoroscope] = useState({})
+  const [answer, setAnswer] = useState({})
+
+useEffect(() => {
+    if (info.score) {
+      internalApi(info.score)
+        .then((result) => {
+
+          // console.log('result :' ,result[0])
+          setAnswer(result[0])
+        })
+    }
+  }, [info])
 
   useEffect(() => {
     if (info.starSign) {
@@ -42,7 +54,7 @@ const App = () => {
         : <>
 
           <ExternalResponse obj={horoscope}/>
-          <InternalResponse text={'are you there'}/>
+          <InternalResponse text={answer}/>
 
         </>}
       <Footer />
