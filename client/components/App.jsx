@@ -9,6 +9,8 @@ import { externalApi } from '../api'
 
 const App = () => {
   const [submitted, setSubmitted] = useState(false)
+  const [info, setInfo] = useState({})
+
 
 //this is where i do usestate
   const [horoscope, setHoroscope] = useState({})
@@ -20,14 +22,27 @@ const App = () => {
     })
   }, [submitted])
 
+  const formResponse = (data) => {
+    setInfo({
+      starSign: data.starSign,
+      name: data.name,
+      score: data.score
+    })
+    setSubmitted(true)
+    console.log(info)
+  }
+
+
   return (
     <div className='app'>
 
       <Header />
-      {!submitted ? <Form update={setSubmitted(true)} />
+      {!submitted ? <Form update={(resp) => formResponse(resp)} />
         : <>
+
           <ExternalResponse obj={horoscope}/>
           <InternalResponse text={'are you there'}/>
+
         </>}
       <Footer />
     </div>

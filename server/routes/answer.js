@@ -3,8 +3,8 @@ const router = express.Router()
 
 const db = require('../db/db')
 
-router.get('/', (req, res) => {
-  db.getAnswer(score)
+router.get('/:score', (req, res) => {
+  db.getAnswer(req.params.score)
     .then(answer => {
       res.json(answer)
       return null
