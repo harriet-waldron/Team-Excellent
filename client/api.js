@@ -14,11 +14,7 @@ export function externalApi (starSign) {
 
 export function internalApi () {
 
-  return 
 }
-
 
 // App
 // externalApi('pisces')
-
-

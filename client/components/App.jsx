@@ -5,21 +5,20 @@ import Form from './Form.jsx'
 import ExternalResponse from './ExternalResponse.jsx'
 import InternalResponse from './InternalResponse.jsx'
 import Footer from './Footer.jsx'
-import { externalApi } from '../api'
+import { externalApi, internalApi } from '../api'
 
 const App = () => {
   const [submitted, setSubmitted] = useState(false)
   const [info, setInfo] = useState({})
 
-
-//this is where i do usestate
+  // this is where i do usestate
   const [horoscope, setHoroscope] = useState({})
 
   useEffect(() => {
     externalApi('pisces')
-    .then((result) => {
-      setHoroscope(result)
-    })
+      .then((result) => {
+        setHoroscope(result)
+      })
   }, [submitted])
 
   const formResponse = (data) => {
@@ -31,7 +30,6 @@ const App = () => {
     setSubmitted(true)
     console.log(info)
   }
-
 
   return (
     <div className='app'>
