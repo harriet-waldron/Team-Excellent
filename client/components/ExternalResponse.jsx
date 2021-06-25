@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { externalApi } from "./api"
+// import { externalApi } from "./api"
 
 
 const ExternalResponse = (props) => {

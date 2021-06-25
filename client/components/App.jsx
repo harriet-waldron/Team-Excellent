@@ -8,19 +8,29 @@ import Footer from './Footer.jsx'
 
 const App = () => {
   const [submitted, setSubmitted] = useState(false)
+  const [info, setInfo] = useState({})
 
-//this is where i do usestate
+  const formResponse = (data) => {
+    setInfo({
+      starSign: data.starSign,
+      name: data.name,
+      score: data.score
+    })
+    setSubmitted(true)
+    console.log(info)
+  }
+
+  // this is where i do usestate
   const [horoscope, setHoroscope] = useState([])
-
 
   return (
     <div className='app'>
 
       <Header />
-      {!submitted ? <Form update={setSubmitted(true)} />
+      {!submitted ? <Form update={(resp) => formResponse(resp)} />
         : <>
-          <ExternalResponse text={externalAPI}/>
-          <InternalResponse text={externalAPI}/>
+          <ExternalResponse data={info} />
+          <InternalResponse data={info} />
         </>}
       <Footer />
     </div>

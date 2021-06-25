@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import { } from '../api'
+// import { } from '../api'
 
 const Form = (props) => {
   const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ const Form = (props) => {
   }, [helper])
 
   const handleSubmit = (e) => {
-    props.update()
+    props.update(formData)
     e.preventDefault()
     console.log(formData)
   }
