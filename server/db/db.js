@@ -8,6 +8,6 @@ module.exports = {
 
 function getAnswer (score, db = connection) {
   return db('answers')
-  .select()
-  .where ('score', score)
+    .select()
+    .where('score', score)
 }

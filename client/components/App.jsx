@@ -9,14 +9,18 @@ import Footer from './Footer.jsx'
 const App = () => {
   const [submitted, setSubmitted] = useState(false)
 
+//this is where i do usestate
+  const [horoscope, setHoroscope] = useState([])
+
+
   return (
     <div className='app'>
-     
+
       <Header />
-      {!submitted ? <Form update={setSubmitted}/>
+      {!submitted ? <Form update={setSubmitted(true)} />
         : <>
-          <ExternalResponse />
-          <InternalResponse />
+          <ExternalResponse text={externalAPI}/>
+          <InternalResponse text={externalAPI}/>
         </>}
       <Footer />
     </div>
