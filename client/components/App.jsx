@@ -20,7 +20,7 @@ useEffect(() => {
       internalApi(info.score)
         .then((result) => {
 
-          console.log('result :' ,result[0])
+          // console.log('result :' ,result[0])
           setAnswer(result[0])
         })
     }
