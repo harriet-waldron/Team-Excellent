@@ -15,11 +15,14 @@ const App = () => {
   const [horoscope, setHoroscope] = useState({})
 
   useEffect(() => {
-    externalApi('pisces')
-      .then((result) => {
-        setHoroscope(result)
-      })
-  }, [submitted])
+    if (info.starSign) {
+      externalApi(info.starSign)
+        .then((result) => {
+          setHoroscope(result)
+        })
+    }
+  }, [info])
+
 
   const formResponse = (data) => {
     setInfo({
