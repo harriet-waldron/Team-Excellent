@@ -11,12 +11,12 @@ const App = () => {
 
   return (
     <div className='app'>
-     
+
       <Header />
-      {!submitted ? <Form update={setSubmitted}/>
+      {!submitted ? <Form update={setSubmitted(true)} />
         : <>
-          <ExternalResponse />
-          <InternalResponse />
+          <ExternalResponse text={externalAPI}/>
+          <InternalResponse text={externalAPI}/>
         </>}
       <Footer />
     </div>

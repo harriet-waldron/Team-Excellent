@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ExternalResponse = () => {
+const ExternalResponse = (props) => {
   return (
     <div className='externalResponse'>
       <h2>horoscope response from api</h2>
