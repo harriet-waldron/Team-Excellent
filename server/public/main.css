@@ -1,0 +1,84 @@
+html {
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #52952E;
+    font-family: 'Permanent Marker', cursive;
+}
+.app {
+    background-color: #52952E;
+    height: 100vh;
+}
+.headerContainer {
+    padding: 1rem;
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #52952E;
+    width: 90vw;
+}
+.titleContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #221F02;
+    padding: 0.0rem 2rem;
+    border-radius: 0.8rem;
+    box-shadow: -5px 10px 6px rgba(0, 0, 0, 0.4),
+   -8px 15px 10px rgba(0, 0, 0, 0.4),
+   -8px 20px 20px rgba(0, 0, 0, 0.4),
+   -8px 25px 40px rgba(0, 0, 0, 0.4),
+   -8px 33px 60px rgba(0, 0, 0, 0.4);  
+    
+    
+
+}
+.headerTitle {
+    color: #52952E;
+    margin: 0px;
+    font-size: 8rem;
+    text-shadow: -1px 1px 1px #52952E,
+    -3px 2px 1px #294B17,
+    -3px 3px 1px #294B17,
+    -3px 4px 1px #294B17,
+    -3px 5px 1px #294B17,
+    -3px 6px 1px #294B17,
+    -3px 7px 1px #294B17,
+    -3px 8px 1px #294B17,
+    -3px 9px 1px #294B17;
+    
+}
+.form {
+    margin: 1rem 4rem;
+    border-radius: 1rem;
+    background-color: #52952E;
+    box-shadow: -2px 1px 1px rgba(0, 0, 0, 0.4),
+    -2px 2px 1px rgba(0, 0, 0, 0.4),
+    -2px 3px 1px rgba(0, 0, 0, 0.4),
+    -2px 4px 1px rgba(0, 0, 0, 0.4),
+    -5px 10px 6px rgba(0, 0, 0, 0.4),
+    -5px 15px 10px rgba(0, 0, 0, 0.4),
+    -5px 20px 20px rgba(0, 0, 0, 0.4),
+    -5px 25px 40px rgba(0, 0, 0, 0.4),
+    -5px 33px 60px rgba(0, 0, 0, 0.4);
+}
+.labelStyle {
+    font-size: 1rem;
+}
+.allQContainer {
+    
+    padding: 0rem 0.5rem;
+}
+.formHeaderStyle {
+    
+    padding: 0rem 0.5rem;
+}
+.buttonContainer {
+    padding: 0.5rem;
+}
+.footerContainer {
+    width: 100%;
+    background-color: red;
+    height: 5rem;
+}
