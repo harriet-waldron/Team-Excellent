@@ -13,5 +13,6 @@ export function externalApi () {
 }
 
 export function internalApi () {
-
+    return request.get (server.URL/{score})
+        .then(response => response.body)
 }
