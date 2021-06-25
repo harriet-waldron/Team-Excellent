@@ -2,6 +2,8 @@ html {
     font-size: 20px;
     margin: 0px;
     padding: 0px;
+    background-color: #52952E;
+    font-family: 'Permanent Marker', cursive;
 }
 .app {
     background-color: #52952E;
@@ -46,4 +48,37 @@ html {
     -3px 8px 1px #294B17,
     -3px 9px 1px #294B17;
     
+}
+.form {
+    margin: 1rem 4rem;
+    border-radius: 1rem;
+    background-color: #52952E;
+    box-shadow: -2px 1px 1px rgba(0, 0, 0, 0.4),
+    -2px 2px 1px rgba(0, 0, 0, 0.4),
+    -2px 3px 1px rgba(0, 0, 0, 0.4),
+    -2px 4px 1px rgba(0, 0, 0, 0.4),
+    -5px 10px 6px rgba(0, 0, 0, 0.4),
+    -5px 15px 10px rgba(0, 0, 0, 0.4),
+    -5px 20px 20px rgba(0, 0, 0, 0.4),
+    -5px 25px 40px rgba(0, 0, 0, 0.4),
+    -5px 33px 60px rgba(0, 0, 0, 0.4);
+}
+.labelStyle {
+    font-size: 1rem;
+}
+.allQContainer {
+    
+    padding: 0rem 0.5rem;
+}
+.formHeaderStyle {
+    
+    padding: 0rem 0.5rem;
+}
+.buttonContainer {
+    padding: 0.5rem;
+}
+.footerContainer {
+    width: 100%;
+    background-color: red;
+    height: 5rem;
 }
