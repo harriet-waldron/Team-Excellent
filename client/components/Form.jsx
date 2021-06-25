@@ -28,7 +28,7 @@ const Form = (props) => {
   const handleSubmit = (e) => {
     props.update(formData)
     e.preventDefault()
-    console.log(formData)
+    // console.log(formData)
   }
 
   return (
