@@ -3,7 +3,8 @@ html {
     margin: 0px;
     padding: 0px;
     background-color: #52952E;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Arvo', serif;
+    
 }
 .app {
     background-color: #52952E;
@@ -38,6 +39,7 @@ html {
     color: #52952E;
     margin: 0px;
     font-size: 8rem;
+    font-family: 'Permanent Marker', cursive;
     text-shadow: -1px 1px 1px #52952E,
     -3px 2px 1px #294B17,
     -3px 3px 1px #294B17,
@@ -71,7 +73,6 @@ html {
     padding: 0rem 0.5rem;
 }
 .formHeaderStyle {
-    
     padding: 0rem 0.5rem;
 }
 .buttonContainer {
@@ -79,6 +80,24 @@ html {
 }
 .footerContainer {
     width: 100%;
-    background-color: red;
-    height: 5rem;
+    max-height: 15rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.PoOne {
+    height: 20%;
+    width: 20%;
+}
+.PoTwo {
+    height: 20%;
+    width: 20%;
+}
+.PoThree {
+    height: 20%;
+    width: 20%;
+}
+.PoFour {
+    height: 20%;
+    width: 20%;
 }
