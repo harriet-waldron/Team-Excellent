@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { externalApi } from "./api"
 
-const ExternalResponse = () => {
+
+const ExternalResponse = (props) => {
+
+// 
+
   return (
     <div className='externalResponse'>
       <h2>horoscope response from api</h2>
