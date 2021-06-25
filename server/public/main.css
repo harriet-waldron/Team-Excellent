@@ -121,3 +121,7 @@ html {
   0% {top:5px}
   100% {top: 5px;}
 }
+
+.externalResponse li {
+  line-height: 1.5em;
+}
