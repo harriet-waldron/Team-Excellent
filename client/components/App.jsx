@@ -9,6 +9,10 @@ import Footer from './Footer.jsx'
 const App = () => {
   const [submitted, setSubmitted] = useState(false)
 
+//this is where i do usestate
+  const [horoscope, setHoroscope] = useState([])
+
+
   return (
     <div className='app'>
 
