@@ -17,12 +17,10 @@ const App = () => {
   useEffect(() => {
     if (info.starSign) {
       externalApi(info.starSign)
-        .then((result) => {
-          setHoroscope(result)
-        })
+        .then((result) => setHoroscope(result))
+        .catch(err => console.log(err))
     }
   }, [info])
-
 
   const formResponse = (data) => {
     setInfo({
@@ -41,7 +39,7 @@ const App = () => {
       {!submitted ? <Form update={(resp) => formResponse(resp)} />
         : <>
 
-          <ExternalResponse obj={horoscope}/>
+          <ExternalResponse obj={horoscope} name={info.name} star={info.starSign} />
           <InternalResponse text={'are you there'}/>
 
         </>}
