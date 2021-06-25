@@ -101,3 +101,27 @@ html {
     height: 20%;
     width: 20%;
 }
+
+.landingPage {
+  text-align: center;
+}
+
+.landingPage img {
+  width: 200px;
+  position: relative;
+}
+
+.landingPage img:active {
+  width: 200px;
+  animation-name: jim;
+  animation-duration: 1s;
+}
+
+@keyframes jim {
+  0% {top:5px}
+  100% {top: 5px;}
+}
+
+.externalResponse li {
+  line-height: 1.5em;
+}
