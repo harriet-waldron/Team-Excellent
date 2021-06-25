@@ -1,25 +1,32 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-import {} from '../api'
+import { } from '../api'
 
-const Form = () => {
+const Form = (props) => {
   const [formData, setFormData] = useState({
-    responseID: 0,
+    score: 0,
     name: '',
-    birthdate: '',
+    starSign: '',
     question1: 0,
     question2: 0,
     question3: 0,
     question4: 0
   })
 
+  const [helper, setHelper] = useState(0)
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
+    setHelper(helper + 1)
   }
 
+  useEffect(() => {
+    const newResponseID = Number(formData.question1) + Number(formData.question2) + Number(formData.question3) + Number(formData.question4)
+    setFormData({ ...formData, score: newResponseID })
+  }, [helper])
+
   const handleSubmit = (e) => {
-    const responseID = formData.question1 + formData.question2 + formData.question3 + formData.question4
-    
+    props.update()
     e.preventDefault()
     console.log(formData)
   }
@@ -28,8 +35,8 @@ const Form = () => {
     <div className='form'>
       <form onSubmit={(e => handleSubmit(e))}>
         <label htmlFor='name'>Name:</label>
-        <input name='name' type='text' value={formData.name} placeholder='Name' required onChange={(e) => handleChange(e)} />
-        <input name='birthdate' type='date' value={formData.birthdate} placeholder='Birthdate' required onChange={(e) => handleChange(e)} />
+        <input name='name' type='text' value={formData.name} placeholder='Name' onChange={(e) => handleChange(e)} />
+        <input name='birthdate' type='text' value={formData.starsign} placeholder='starsign' onChange={(e) => handleChange(e)} />
         <h2>Rate these questions from 1 to 4, 4 meaning you completely agree, 1 meaning you completely disagree</h2>
         <h3>Is noodles the staple of life?</h3>
         <label htmlFor='q1-1'>1</label>
